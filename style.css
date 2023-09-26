@@ -1,0 +1,97 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: float 10s ease-in-out infinite;
+}
+
+.balloon {
+    position: absolute;
+    animation: floatUp 6s ease-in-out infinite, sway 2s ease-in-out infinite;
+}
+
+.balloon1 {
+    width: 60px;
+    top: 100px;
+    left: 20%;
+}
+
+.balloon2 {
+    width: 80px;
+    top: 200px;
+    left: 40%;
+}
+
+.balloon3 {
+    width: 70px;
+    top: 150px;
+    left: 60%;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.message {
+    font-size: 1.2rem;
+}
+
+.firework {
+    background-image: url('firework.gif');
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    animation: explode 2s ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
